@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/50d2a8eefe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="w-9/12 mx-auto mt-10">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="grid gap-4">
+                    <h1 class="text-center text-2xl font-semibold text-amber-600 mb-5">Products</h1>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card card-compact w-full bg-base-100 shadow-xl">
+                            <figure><img src="images/shoe-1.png" alt="Shoes" /></figure>
+                            <div class="card-body">
+                                <h2 class="card-title" id="">Nike Shoes 1</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio!</p>
+                                <p>$<span>150</span></p>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary" onclick="addToCart(this)" id="buy-now-btn">Buy
+                                        Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-compact w-full bg-base-100 shadow-xl">
+                            <figure><img src="images/shoe-2.png" alt="Shoes" /></figure>
+                            <div class="card-body">
+                                <h2 class="card-title" id="">Nike Shoes 2</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio!</p>
+                                <p>$<span>170</span></p>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card card-compact w-full bg-base-100 shadow-xl">
+                            <figure><img src="images/bag-1.png" alt="Shoes" /></figure>
+                            <div class="card-body">
+                                <h2 class="card-title" id="">Bags 1</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio!</p>
+                                <p>$<span>190</span></p>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-compact w-full bg-base-100 shadow-xl">
+                            <figure><img src="images/bag-3.png" alt="Shoes" /></figure>
+                            <div class="card-body">
+                                <h2 class="card-title" id="">Bags 2</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio!</p>
+                                <p>$<span>140</span></p>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-center text-2xl font-semibold text-orange-600 mb-5">Cart <span id="total-product"
+                            class="text-red-600 font-bold">0</span> Products</h1>
+                    <div>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full text-center">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Product Name</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="added-product"></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Total Price</th>
+                                        <th>$<span id="total-price">0</span></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="card-actions justify-end mt-5">
+                            <button class="btn btn-primary normal-case text-base">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
